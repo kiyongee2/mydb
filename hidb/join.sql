@@ -1,5 +1,8 @@
 -- 2개 이상의 테이블에서 sql 질의
 
+SELECT *
+FROM orders;
+
 -- 고객과 고객의 주문에 관한 데이터를 모두 검색하시오
 SELECT *
 FROM customer, orders
@@ -34,3 +37,19 @@ FROM customer, orders, book
 WHERE customer.custid = orders.custid 
     AND book.bookid = orders.bookid
     AND book.price = 20000;
+    
+-- 도서를 구매하지 않은 고객을 포함하여 
+-- 고객의 이름과 고객이 주문한 도서의 판매가격을 구하시오
+SELECT customer.name, orders.saleprice
+FROM customer LEFT OUTER JOIN orders
+        ON customer.custid = orders.custid;
+
+
+
+
+
+
+
+
+
+
