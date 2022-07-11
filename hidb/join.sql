@@ -14,6 +14,12 @@ FROM customer, orders
 WHERE customer.custid = orders.custid
 ORDER BY customer.custid;
 
+-- '박지성' 고객의 주문내역을 검색하시오
+SELECT * 
+FROM customer, orders
+WHERE customer.custid = orders.custid 
+AND customer.name = '박지성';
+
 -- 고객의 이름과 고객이 주문한 도서의 판매가격을 검색하시오
 SELECT customer.name, orders.saleprice
 FROM customer, orders
