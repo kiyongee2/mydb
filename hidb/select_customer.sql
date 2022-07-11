@@ -7,10 +7,10 @@ FROM customer;
 SELECT name, address, phone
 FROM customer;
 
--- 주소가 '영국'인 고객을 검색하시오
+-- 주소가 '대한민국'인 고객을 검색하시오
 SELECT * 
 FROM customer 
-WHERE address LIKE '%영국%';
+WHERE address LIKE '%대한민국%';
 
 -- 고객의 이름이 '김연아' 혹은 '안산'인 고객을 검색하시오
 SELECT * 
