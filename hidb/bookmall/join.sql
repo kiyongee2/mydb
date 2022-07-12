@@ -32,10 +32,11 @@ WHERE customer.custid = orders.custid
 GROUP BY customer.name
 ORDER BY customer.name;
 
--- 고객의 이름과 주문한 도서의 이름을 검색하시오
+-- 고객의 이름과 주문한 도서의 이름과 가격을 검색하시오
 SELECT customer.name, book.bookname
 FROM customer, orders, book
-WHERE customer.custid = orders.custid AND book.bookid = orders.bookid;
+WHERE customer.custid = orders.custid 
+AND book.bookid = orders.bookid;
 
 -- 가격이 20000원인 도서를 주문한 고객의 이름과 도서의 이름을 검색하시오
 SELECT customer.name, book.bookname
