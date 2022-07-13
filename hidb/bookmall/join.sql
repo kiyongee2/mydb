@@ -25,6 +25,11 @@ SELECT customer.name, orders.saleprice
 FROM customer, orders
 WHERE customer.custid = orders.custid;
 
+SELECT customer.name, AVG(saleprice)
+FROM customer, orders
+WHERE customer.custid = orders.custid
+GROUP BY customer.name;
+
 -- 고객별로 주문한 모든 도서의 총 판매액을 구하고, 고객별로 정렬하시오
 SELECT customer.name, SUM(saleprice)
 FROM customer, orders
